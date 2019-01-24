@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    app:mrl_rippleAlpha="0.2"
+    app:mrl_rippleColor="@color/colorPrimary"
+    app:mrl_rippleDelayClick="false"
+    app:mrl_rippleHover="true"
+    app:mrl_rippleOverlay="true">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/kingr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/coupletitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary" />
+
+
+            <LinearLayout
+                android:id="@+id/centerpoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coupletitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/boy"
+                    android:layout_width="@dimen/itemimgwidth"
+                    android:layout_height="@dimen/itemimgwidth"
+                    android:layout_weight="1"
+                    android:src="@drawable/aha" />
+
+                <ImageView
+                    android:id="@+id/girl"
+                    android:layout_width="@dimen/itemimgwidth"
+                    android:layout_height="@dimen/itemimgwidth"
+                    android:layout_weight="1"
+                    android:src="@drawable/aha" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/couplename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/centerpoint"
+                android:layout_marginTop="10dp"
+                android:gravity="center" />
+
+
+            <Button
+                android:id="@+id/choose"
+                android:layout_width="@dimen/selectwidth"
+                android:layout_height="@dimen/selectheight"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/couplename"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/press"
+                android:clickable="true"
+                android:padding="1dp"
+                android:shadowColor="@color/textShadow"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="@string/select"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</com.balysv.materialripple.MaterialRippleLayout>
+

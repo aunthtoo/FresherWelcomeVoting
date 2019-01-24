@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:scrollbars="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/main">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <!--Name Line Start-->
+
+            <LinearLayout
+                android:id="@+id/nameline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/boy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="2"
+                        android:text="Boy"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/lineheight"
+                        android:layout_below="@+id/boy"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@color/colorPrimary" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/girl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="2"
+                        android:text="Girl"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/lineheight"
+                        android:layout_below="@+id/girl"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@color/colorPrimary" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- Name Line Ended-->
+
+
+            <View
+                android:id="@+id/centerline"
+                android:layout_width="@dimen/lineheight"
+                android:layout_height="555dp"
+                android:layout_below="@+id/nameline"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimary" />
+
+            <!--card view line 1-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/boy1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/centerline"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@+id/centerline"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/king"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/kingicon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="KING"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+
+                    </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/girl1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/centerline"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/centerline"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/queen"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/queenicon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="QUEEN"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+                    </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--card view line 2-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/boy2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/boy1"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@+id/centerline"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/smart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/smarticon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="SMART"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+                    </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/girl2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/girl1"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/centerline"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/glory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/gloryicon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="GLORY"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+                    </RelativeLayout>
+
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <!-- card view line 3-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/boy3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/boy2"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@+id/centerline"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/popular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/popularicon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="POPULAR"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+                    </RelativeLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/girl3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/girl2"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/centerline"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/attraction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/attractionicon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="ATTRACTION"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+                    </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <!-- card view line 4-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/boy4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/boy3"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@+id/centerline"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/joker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/jokericon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="JOKER"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+                    </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/girl4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/girl3"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/centerline"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/innocence"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/innocenceicon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="INNOCENCE"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+                    </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- card view line 5-->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/boy5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/boy4"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@+id/centerline"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/allking"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/allkingicon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="ALL KING"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+                    </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/girl5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/girl4"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/centerline"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/allqueen"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/allqueenicon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="ALL QUEEN"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+                    </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--best couple-->
+
+            <!--  <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/centerline"
+                  android:layout_marginTop="20dp"
+                  android:paddingBottom="10dp">
+
+                  <com.balysv.materialripple.MaterialRippleLayout
+                      android:id="@+id/submitarea"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerHorizontal="true"
+                      app:mrl_rippleAlpha="0.2"
+                      app:mrl_rippleColor="@color/colorPrimary"
+                      app:mrl_rippleDelayClick="false"
+                      app:mrl_rippleHover="true"
+                      app:mrl_rippleOverlay="true">
+
+                      <Button
+                          android:id="@+id/submit"
+                          android:layout_width="wrap_content"
+                          android:layout_height="@dimen/btnheight"
+                          android:background="@drawable/btnback"
+                          android:shadowColor="#000"
+                          android:shadowDx="2"
+                          android:shadowDy="2"
+                          android:shadowRadius="2"
+                          android:text="Vote"
+                          android:textAllCaps="false"
+                          android:textColor="@android:color/white" />
+
+                  </com.balysv.materialripple.MaterialRippleLayout>
+
+                  <View
+                      android:layout_width="match_parent"
+                      android:layout_height="3dp"
+                      android:layout_marginLeft="2dp"
+                      android:layout_marginRight="2dp"
+                      android:layout_marginTop="@dimen/top"
+                      android:layout_toLeftOf="@+id/submitarea"
+                      android:background="@color/colorPrimary" />
+
+                  <View
+                      android:layout_width="match_parent"
+                      android:layout_height="3dp"
+                      android:layout_marginLeft="2dp"
+                      android:layout_marginRight="2dp"
+                      android:layout_marginTop="@dimen/top"
+                      android:layout_toRightOf="@+id/submitarea"
+                      android:background="@color/colorPrimary" />
+
+              </RelativeLayout>-->
+
+            <View
+                android:id="@+id/bottomvline"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lineheight"
+                android:layout_below="@+id/centerline"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/colorPrimary" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/bestcouple"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/bottomvline"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="10dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorPrimary"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <RelativeLayout
+                        android:id="@+id/bcouple"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/inner">
+
+                        <RelativeLayout
+                            android:id="@+id/bcoupleicon"
+                            android:layout_width="@dimen/img_width"
+                            android:layout_height="@dimen/img_width"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/iconback">
+
+                            <TextView
+                                android:id="@+id/iconlbl11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:shadowColor="@color/textShadow"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="Best Couple"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/icon_txt_size"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tex11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tap_to_choose"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/tap_txt" />
+                    </RelativeLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--best couple-->
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

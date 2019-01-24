@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Welcome Voting</string>
+    <string name="tap_to_choose">Tap to choose</string>
+    <string name="keyword">Enter keyword to pass ...</string>
+    <string name="warn">Warning!</string>
+    <string name="choosetxt">Choose from the following selection</string>
+    <string name="name">Name   : </string>
+    <string name="bd">Class   : </string>
+    <string name="select">Select</string>
+    <string name="selected">Selected</string>
+    <string name="enter">*Enter your favourite name below*</string>
+    <string name="entername">Enter name...</string>
+    <string name="spName">Computer University, Pyay</string>
+
+
+    <string name="vote">Fresher Welcome Voting</string>
+</resources>

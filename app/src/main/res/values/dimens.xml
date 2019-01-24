@@ -1,0 +1,21 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="drop_height">210dp</dimen>
+    <dimen name="img_width">70dp</dimen>
+    <dimen name="icon_txt_size">10sp</dimen>
+    <dimen name="tap_txt">10sp</dimen>
+    <dimen name="inner">3dp</dimen>
+    <dimen name="btnheight">31dp</dimen>
+    <dimen name="top">14dp</dimen>
+    <dimen name="dialtitlesize">20sp</dimen>
+    <dimen name="dialmargin">10dp</dimen>
+    <dimen name="selecttop">5dp</dimen>
+    <dimen name="itemimgwidth">80dp</dimen>
+    <dimen name="selectheight">23dp</dimen>
+    <dimen name="selectwidth">70dp</dimen>
+
+    <!--line height-->
+    <dimen name="lineheight">2dp</dimen>
+</resources>
